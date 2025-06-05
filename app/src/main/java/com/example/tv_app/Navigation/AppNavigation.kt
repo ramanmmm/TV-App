@@ -11,7 +11,6 @@ import com.example.tv_app.Home.HomeScreen
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
-
     NavHost(navController = navController, startDestination = "login") {
         composable("login") {
             LoginScreen(navController)

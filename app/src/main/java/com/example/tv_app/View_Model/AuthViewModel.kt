@@ -36,4 +36,5 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
             onResult(user != null)
         }
     }
+
 }
