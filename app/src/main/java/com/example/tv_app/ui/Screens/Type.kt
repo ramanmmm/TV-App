@@ -1,4 +1,4 @@
-package com.example.tv_app.ui.theme
+package com.example.tv_app.ui.Screens
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
