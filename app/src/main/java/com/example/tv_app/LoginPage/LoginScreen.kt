@@ -92,7 +92,9 @@ fun LoginScreen(navController: NavController) {
                 viewModel.login(email, password) { success ->
                     if (success) {
                         navController.navigate("home") {
-                            popUpTo("signup") { inclusive = true }
+                            popUpTo(0) {
+                                inclusive = true
+                            }
                             launchSingleTop = true
                         }
                     } else {

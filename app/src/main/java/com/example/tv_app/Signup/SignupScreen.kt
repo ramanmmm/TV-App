@@ -89,7 +89,7 @@ fun SignupScreen(
 
                         successMessage = "Account created successfully!"
                         navController.navigate("home") {
-                            popUpTo("signup") { inclusive = true }
+                            popUpTo(0) { inclusive = true }
                             launchSingleTop = true
                         }
                     } else {
