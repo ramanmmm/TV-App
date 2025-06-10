@@ -86,8 +86,12 @@ fun SignupScreen(
             Button(onClick = {
                 viewModel.signup(email, password) { signupSuccess ->
                     if (signupSuccess) {
+
                         successMessage = "Account created successfully!"
-                        navController.navigate("home")
+                        navController.navigate("home") {
+                            popUpTo("signup") { inclusive = true }
+                            launchSingleTop = true
+                        }
                     } else {
                         Toast.makeText(context, "Email already registered!", Toast.LENGTH_SHORT).show()
                     }

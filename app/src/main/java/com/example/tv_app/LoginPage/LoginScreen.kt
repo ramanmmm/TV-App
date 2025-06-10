@@ -91,7 +91,10 @@ fun LoginScreen(navController: NavController) {
             Button(onClick = {
                 viewModel.login(email, password) { success ->
                     if (success) {
-                        navController.navigate("home")
+                        navController.navigate("home") {
+                            popUpTo("signup") { inclusive = true }
+                            launchSingleTop = true
+                        }
                     } else {
                         error = "Invalid credentials"
                     }
